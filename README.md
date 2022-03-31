@@ -1,5 +1,7 @@
-# pythontest
-Python Unit Tests using pytest module
+# oddeven
+oddeven module
+
+includes tests using pytest module
 
 Python 3 tests
 Run the tests using command "python3 -m pytest <filename>" or "python -m pytest <filename>"
