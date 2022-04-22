@@ -25,7 +25,7 @@ FILE
 
 def oddnumbers(start: int, end: int, /) -> int:
     """
-    Returns the count of odd number in range of start to end
+    Returns the count of odd numbers in range of start to end
     Parameters:
     start (int): The start of the range
     end   (int): The end of the range
@@ -34,7 +34,7 @@ def oddnumbers(start: int, end: int, /) -> int:
 
 def evennumbers(start: int, end: int, /) -> int:
     """
-    Returns the count of even number in range of start to end
+    Returns the count of even numbers in range of start to end
     Parameters:
     start (int): The start of the range
     end   (int): The end of the range
@@ -52,3 +52,21 @@ def oddevens(start: int, end: int, /) -> tuple:
     number_dict = {"Odds": list(filter(lambda x: x%2 ==1, number_range)),
                    "Evens": list(filter(lambda x: x%2 ==0, number_range))}
     return (number_dict["Odds"], number_dict["Evens"])
+
+def odds(start: int, end: int, /) -> tuple:
+    """
+    Returns a list of odd numbers
+    Parameters:
+    start (int): The start of the range
+    end   (int): The end of the range
+    """
+    return list(range((start if start%2==1 else start+1), end+1, 2))
+
+def evens(start: int, end: int, /) -> tuple:
+    """
+    Returns a list of even numbers
+    Parameters:
+    start (int): The start of the range
+    end   (int): The end of the range
+    """
+    return list(range((start if start%2==0 else start+1), end+1, 2))
