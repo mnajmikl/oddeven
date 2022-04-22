@@ -53,7 +53,7 @@ def oddevens(start: int, end: int, /) -> tuple:
                    "Evens": list(filter(lambda x: x%2 ==0, number_range))}
     return (number_dict["Odds"], number_dict["Evens"])
 
-def odds(start: int, end: int, /) -> tuple:
+def odds(start: int, end: int, /) -> list:
     """
     Returns a list of odd numbers
     Parameters:
@@ -62,7 +62,7 @@ def odds(start: int, end: int, /) -> tuple:
     """
     return list(range((start if start%2==1 else start+1), end+1, 2))
 
-def evens(start: int, end: int, /) -> tuple:
+def evens(start: int, end: int, /) -> list:
     """
     Returns a list of even numbers
     Parameters:
